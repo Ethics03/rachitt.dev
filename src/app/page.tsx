@@ -12,8 +12,8 @@ export default function Home() {
   ];
 
     return (
-  <div className="h-full flex items-start md:items-center px-4 pl-4 lg:pl-8 xl:pl-196 pt-20 md:pt-30 w-full overflow-x-hidden">
-    <div className="flex flex-col gap-10 w-full max-w-full md:max-w-xl">
+  <div className="h-full flex items-start md:items-center pt-20 md:pt-30 w-full">
+  <div className="flex flex-col gap-10 w-full max-w-3xl mx-auto px-4 md:px-0 items-start md:items-center">
         {menuItems.map((item, index) => (
           <Link key={item.label} href={item.href} passHref>
             <motion.div
