@@ -11,9 +11,9 @@ export default function Home() {
     { label: "Blogs", href: "/blog" },
   ];
 
-  return (
-    <div className="h-full flex items-center pl-4 md:pl-196 pt-20 md:pt-30 w-full">
-      <div className="flex flex-col gap-10 w-full max-w-xl">
+    return (
+  <div className="h-full flex items-start md:items-center px-4 pl-4 lg:pl-8 xl:pl-196 pt-20 md:pt-30 w-full overflow-x-hidden">
+    <div className="flex flex-col gap-10 w-full max-w-full md:max-w-xl">
         {menuItems.map((item, index) => (
           <Link key={item.label} href={item.href} passHref>
             <motion.div
