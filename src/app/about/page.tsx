@@ -4,7 +4,7 @@ import ScrambleText from "../components/ScrambleText";
 
 export default function About() {
   return (
-    <div className="h-full flex items-center md:items-start pt-6 pl-4 md:pl-32 w-full">
+  <div className="h-full flex items-start md:items-center md:justify-center pt-6 pl-4 w-full">
       <div className="flex flex-col gap-6 w-full max-w-md md:max-w-3xl">
         <motion.h1
           className="text-3xl font-bold"
