@@ -15,8 +15,12 @@ const jetBrainsMono = JetBrains_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "Rachit's Space",
-  description: "my portfolio",
+  title: "rachit's space",
+  description: "backend engineer and devops/cloud enthusiast.",
+  icons: {
+    icon: "/favicon.ico",  
+    shortcut: "/favicon.ico",
+  },
 };
 
 export default function RootLayout({
