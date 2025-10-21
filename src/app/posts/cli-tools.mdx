@@ -50,5 +50,186 @@ Well that is ***TRUE***.
 
 For basic tasks like **file exploring**, **managing** tasks making **disk partitions** etc. You really don’t need a CLI-Tool unless you messed up your OS install like me and really need it. Regardless for general users CLI-Tools are not preferred for day-to-day tasks or even some development tasks.
 
-
+<br/>
 ***So who really needs CLI-Tools?***
+
+
+Before we talk about who really needs CLI-Tools let’s talk about some important issues it solves—
+
+CLI Applications consume **fewer network resources** compared to graphical applications.
+This is important for systems with limited hardware capabilities or **remote server environment**.
+
+You can manage servers remotely by submitting commands over a secure shell.
+
+<hr/>
+<br/>
+# FOR DEVELOPERS AND SYSADMINS
+
+Learning CLI-tools and CLI-toolchain for Developers and Sysadmins helps in deeper understanding of the system.
+
+For example: You want to quickly see logs for a particular error that you want to fix for your system?
+
+    ``A log is basically a file that records particular events for example system errors or crashes.``
+
+	**journalctl** is a **command-line utility** in Linux used to view and query logs stored in the systemd journal.
+
+	This indeed is really fast and saves you a lot of time.
+	
+	<hr/>
+	<br/>
+# DEVELOPER’S BEST FRIEND
+
+CLI-Tools are a developer’s best friend. They help you understand how each and every process of a particular software or service actually works and also helps you in understanding the general workflow of the code better.
+
+**git** being the most popular CLI-Tool is really convenient and makes it way easy to pull repos, push commits and check status of your current **dev-environment** really fast and that saves a lot of time for the developer to actually code their project.
+
+
+## How does CLI WORK?
+
+``The CLI basically operates on the default shell. which is between the operating system and the user.``
+
+**A shell is basically like a translator between you and the OS. For example:**
+
+when you open Terminal on Linux/macOS.
+
+You want to search for a particular file in a directory?
+
+![ls](/images/cli_1.png)
+
+***Ah! found my config!!***
+
+**cd** — command is basically used to move into a particular directory in this case (.config)
+
+**ls** — Is used to list all the files or folders in that particular directory.
+
+**So that’s how I got my config!!**
+
+That’s basically the shell that you’re using to find that file.
+
+Now there is freedom to choose what shell you want to use depending on what features you need from that shell.
+
+What I am using in the image above is **fish** shell.
+
+Other popular options are : 
+	- **1. Bash**
+	- **2. Zsh**
+	- **3. Fish**
+	- **4. Powershell (well in windows)**
+
+
+**Here is a cool CLI-Tool called lazygit**
+
+
+![lazygit](/images/lazygit.png)
+
+<br/>
+**The power of CLI-Tools used at its best. It gives you are GUI-like experience for managing version control for your projects which even the pros love!!**
+
+<hr/>
+<br/>
+
+# COMMAND CHAINING
+
+Users can even chain multiple commands to get useful output and saving time.
+
+Here is a very basic example for it.
+
+
+![chaining](/images/chaining.png)
+<br/>
+So what’s going on here?
+
+**cat main.go** — Basically reads the file and prints it onto the terminal.
+
+**grep “main”** — Finds the instance of main in the particular file and prints it where it exists.
+
+now the symbol “|” you see is called as ***PIPE***
+<br/>
+``PIPING helps in chaining commands to get useful info for a particular use-case.``
+
+In simple terms it basically means:
+
+**“Take the content of `main.go`, and pass it to grep, which will filter and show only the lines containing the word main.”**
+
+<hr/>
+<br/>
+# WHY YOU SHOULD CONSIDER BUILDING YOUR OWN CLI-TOOL ?
+
+*Now the main part of this article and the motivation it gives you is for making your own CLI-Tool and why you should make it?*
+
+- GUI may not have the same flexibility as a command-line interface. GUIs do not support scripting and automation. Some things are easier done with one command than navigation through clicks.
+
+- CLI-Tools are loved by software developers and system administrators as it makes configuring, deploying, and maintaining systems easier and faster.
+
+``Example: package manager like npm or pip primarily support CLI.``
+
+- **Learning CLI-Tools helps in gaining a better understanding of network issues and troubleshooting.** 	
+
+I made my own CLI-Tool called Hush - a fast, secure and encrypted secret/password manager CLI in Rust. 
+
+Repo Link for Hush here: [hush](https://github.com/Ethics03/hush)
+
+**Check it out!
+
+Here’s a video with a good piece of knowledge regarding the quality of CLI-Tools and how to work around.
+
+<a
+  href="https://youtu.be/ztsOwk1zB3o"
+  target="_blank"
+  rel="noopener noreferrer"
+>
+  <img
+    src="https://img.youtube.com/vi/ztsOwk1zB3o/hqdefault.jpg"
+    alt="Watch Video"
+  />
+</a>
+
+
+<hr/>
+<br/>
+
+# HOW TO START BUILDING CLI TOOLS ?
+
+There are famous and user-friendly libraries and packages for each tech-stack that make it way easier to make CLI-Tools nowadays.
+
+Some examples for each tech-stack that are good to go!
+
+- 1.**Javascript/Typescript** — Node.js with commander package
+- 2. **Go (which I personally use)** — Super fast for cross-platform binaries (Cobra) package is lovely for making CLI-Tools in Go.
+- 3. **Python** — libraries like argparse , click, typer.
+- 4. **Shell scripting (bash/zsh/fish)** — Best for automation of your daily tasks and making important tools.
+
+
+<hr/>
+<br/>
+
+# FINAL THOUGHTS: WHY YOU SHOULD CARE ABOUT CLI-TOOLS.
+
+CLI-Tools might seem overwhelming at first, especially for beginners. But as you deep dive into the world of development and deployment, you realize these tools are your best friends to deepen your understanding of systems and troubleshooting and also making development faster and boost your productivity.
+
+Now that you know the use and importance of CLI Tools, try to make yours!
+
+While you make your CLI-Tool, keep in mind these questions.
+
+
+***What problem does this solve for me?***
+
+***How does it speed up my workflow?***
+
+***Can others benefit from it too?***
+
+**If the answer is “yes,” you’re on the right track to building something truly useful.**
+
+<br/>
+<hr/>
+<br/>
+
+# Acknowledgements/References
+
+video (The PrimeTime) — [link](https://github.com/Ethics03/hush)
+
+Reference info — [link](https://aws.amazon.com/what-is/cli/)
+
+<br/>
+Also thanks to the people giving in their thoughts regarding this article with really helpful arguments.
+
