@@ -17,7 +17,7 @@ export default function Projects() {
       name: "Dots",
       description:
         "A Dotfile Manager CLI-Tool to symlink, version and sync your config files with git.",
-      tech: ["Rust", "CLI", "Git"],
+      tech: ["Go", "cobra-cli", "git"],
       link: "https://github.com/Ethics03/dots",
     },
     {
@@ -32,7 +32,7 @@ export default function Projects() {
       id: "minpin",
       name: "Minpin",
       description: "A URL Shortener in Golang and PostgreSQL",
-      tech: ["Golang", "PostgreSQL", "API"],
+      tech: ["Golang", "PostgreSQL", "net/http"],
       link: "https://github.com/Ethics03/minpin",
     },
   ];
