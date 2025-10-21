@@ -7,12 +7,12 @@ export default function Home() {
   const menuItems = [
     { label: "About", href: "/about" },
     { label: "Projects", href: "/projects" },
-    { label: "Experience", href: "/experience" },
+    { label: "Work", href: "/work" },
     { label: "Blogs", href: "/blog" },
   ];
 
   return (
-    <div className="h-full flex items-center pl-196 pt-10">
+    <div className="h-full flex items-center pl-196 pt-30">
       <div className="flex flex-col gap-10">
         {menuItems.map((item, index) => (
           <Link key={item.label} href={item.href} passHref>

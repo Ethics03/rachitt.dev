@@ -18,15 +18,16 @@ export default function Header() {
       label: "GitHub",
     },
     {
-      href: "https://linkedin.com/in/rachit032004",
-      icon: LinkedinLogoIcon,
-      label: "LinkedIn",
-    },
-    {
       href: "https://twitter.com/rachitcodes",
       icon: XLogoIcon,
       label: "Twitter",
     },
+    {
+      href: "https://linkedin.com/in/rachit032004",
+      icon: LinkedinLogoIcon,
+      label: "LinkedIn",
+    },
+    
   ];
 
   return (
