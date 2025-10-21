@@ -22,7 +22,7 @@ const POSTS_DIR = path.join(process.cwd(), "src/app/posts");
 
 async function getPostBySlug(slug: string): Promise<Post | null> {
   const files = fs.readdirSync(POSTS_DIR).filter((f) => f.endsWith(".mdx"));
-  
+
   for (const file of files) {
     const filePath = path.join(POSTS_DIR, file);
     const raw = fs.readFileSync(filePath, "utf-8");
@@ -32,7 +32,7 @@ async function getPostBySlug(slug: string): Promise<Post | null> {
       return { frontmatter: data as PostFrontmatter, content };
     }
   }
-  
+
   return null;
 }
 
@@ -56,9 +56,7 @@ export default async function BlogPostPage({
         <BackToBlogs />
         <article className="prose prose-invert max-w-none">
           <h1>{post.frontmatter.title}</h1>
-          <p className="text-sm text-gray-400 mb-4">
-            {post.frontmatter.date}
-          </p>
+          <p className="text-sm text-gray-400 mb-4">{post.frontmatter.date}</p>
           <MDXRemote source={post.content} components={components} />
         </article>
       </div>
@@ -75,4 +73,3 @@ export function generateStaticParams() {
     return { slug: data.slug };
   });
 }
-

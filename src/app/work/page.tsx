@@ -11,7 +11,7 @@ export default function Work() {
       period: "2025",
       description:
         "Worked on backend services and monolith architecture. Improved system performance and implemented new features.",
-      tech: ["Typescript", "NestJS", "PostgreSQL", "Docker", "Redis", "AWS EC2","nginx"],
+      tech: ["Typescript", "NestJS", "PostgreSQL", "Docker", "Redis", "AWS EC2", "nginx"],
       link: "https://fordsmen.com",
     },
   ];
@@ -24,9 +24,9 @@ export default function Work() {
           initial={{ opacity: 0, x: -20 }}
           animate={{ opacity: 1, x: 0 }}
         >
-          <ScrambleText text="$ experience" />
+          <ScrambleText text="$ work" />
         </motion.h1>
-        
+
         <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
           {works.map((exp, index) => (
             <motion.a
@@ -46,7 +46,7 @@ export default function Work() {
                 </h2>
                 <span className="text-white/50 text-sm">{exp.period}</span>
               </div>
-              
+
               <h3 className="text-lg text-white/80 mb-3">
                 <ScrambleText text={exp.company} delay={index * 150 + 50} />
               </h3>
