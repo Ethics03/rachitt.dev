@@ -8,9 +8,9 @@ export default function BlogPage() {
   return (
     <div className="flex items-center pt-10">
        <div className="max-w-5xl">
-      <h1 className="text-3xl md:text-6xl font-bold mb-6">
-        <ScrambleText text="$ blogs" />
-      </h1>
+      <h1 className="text-5xl md:text-4xl font-bold mb-6">
+               <ScrambleText text="$ blogs" />
+           </h1>
 
       <div className="w-full max-w-4xl flex flex-col gap-4">
         {posts.map((post) => (
