@@ -51,11 +51,11 @@ export default async function BlogPostPage({
   const components = useMDXComponents({});
 
   return (
-    <div className="h-full flex flex-col items-center justify-start px-8 py-16 pt-1">
-      <div className="max-w-4xl w-full">
+    <div className="min-h-screen w-full overflow-x-hidden">
+      <div className="max-w-4xl w-full mx-auto px-4 md:px-8 py-8 md:py-16">
         <BackToBlogs />
-        <article className="prose prose-invert max-w-none">
-          <h1>{post.frontmatter.title}</h1>
+        <article className="prose prose-invert max-w-none prose-pre:overflow-x-auto prose-pre:max-w-full prose-img:max-w-full prose-img:h-auto prose-code:break-words prose-p:break-words">
+          <h1 className="break-words">{post.frontmatter.title}</h1>
           <p className="text-sm text-gray-400 mb-4">{post.frontmatter.date}</p>
           <MDXRemote source={post.content} components={components} />
         </article>

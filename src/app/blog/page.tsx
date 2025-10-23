@@ -6,8 +6,9 @@ export default function BlogPage() {
   const posts = getPostMetadata();
 
   return (
-    <div className="h-full flex items-center flex-col justify-start px-4 py-16 pt-2">
-      <h1 className="text-3xl font-bold mb-8">
+    <div className="flex items-center pt-10">
+       <div className="max-w-5xl">
+      <h1 className="text-3xl md:text-6xl font-bold mb-6">
         <ScrambleText text="$ blogs" />
       </h1>
 
@@ -23,6 +24,7 @@ export default function BlogPage() {
             {post.excerpt && <p className="text-gray-300">{post.excerpt}</p>}
           </Link>
         ))}
+      </div>
       </div>
     </div>
   );

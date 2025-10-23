@@ -29,11 +29,11 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en">
+    <html lang="en" className="overflow-x-hidden">
       <body
         className={`${geistSans.variable} ${jetBrainsMono.variable} min-h-screen flex flex-col antialiased`}
       >
-        <div className="w-full max-w-4xl mx-auto px-4">
+        <div className="w-full max-w-5xl mx-auto px-4">
           <Header />
           <main className="flex-1">{children}</main>
         </div>

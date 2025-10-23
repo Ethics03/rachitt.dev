@@ -31,7 +31,7 @@ export default function ScrambleText({
     const characters =
       "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz!@#$%^&*";
     let iteration = 0;
-    const speed = 20; // milliseconds per frame
+    const speed = 18; // milliseconds per frame
 
     const interval = setInterval(() => {
       setDisplayText(
