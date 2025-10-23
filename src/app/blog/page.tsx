@@ -17,7 +17,7 @@ export default function BlogPage() {
           <Link
             key={post.slug}
             href={`/blog/${post.slug}`}
-            className="block p-3 border border-gray-700 hover:border-orange-500 transition-colors"
+            className="block p-3 border border-white/30 hover:border-orange-500 transition-colors"
           >
             <h2 className="text-2xl font-semibold mb-2">{post.title}</h2>
             <p className="text-sm text-gray-400 mb-2">{post.date}</p>
