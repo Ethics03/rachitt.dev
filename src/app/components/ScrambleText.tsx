@@ -12,7 +12,7 @@ export default function ScrambleText({
   className = "",
   delay = 0,
 }: ScrambleTextProps) {
-  const [displayText, setDisplayText] = useState("");
+  const [displayText, setDisplayText] = useState("\u00A0".repeat(text.length));
   const [isComplete, setIsComplete] = useState(false);
   const [hasStarted, setHasStarted] = useState(false);
 
