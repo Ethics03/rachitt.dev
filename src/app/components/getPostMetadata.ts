@@ -17,17 +17,18 @@ export default function getPostMetaData(): PostMetaData[] {
     const filepath = path.join(postDir, file);
     const content = fs.readFileSync(filepath, "utf-8");
 
-    const { data } = matter(content); //parsing the formatter
+    const { data } = matter(content); 
 
     return {
       title: data.title ?? "Untitled",
       slug: data.slug ?? file.replace(/\.mdx$/, ""),
-      date: data.date ?? "2025-21-10",
+      date: data.date ?? "2025-10-24", 
       excerpt: data.excerpt ?? "",
     };
   });
 
-  posts.sort((a, b) => (a.date < b.date ? 1 : -1));
+ 
+  posts.sort((a, b) => new Date(b.date).getTime() - new Date(a.date).getTime());
 
   return posts;
 }
