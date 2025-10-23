@@ -1,0 +1,191 @@
+---
+title: "Redis and why?"
+slug: "redis-first"
+date: "2025-10-24"
+---
+
+The first time I truly understood the need for Redis was when I had to cache **hashed OTPs** while verification of the user in the Redis store corresponding to each email along with expiration time, max retries, cooldown and so. 
+
+Redis made it really easy to implement all of this, which increased our system’s performance by 40% and also **preventing vendor lock-in** by not using an external API service for authentication. 
+
+
+But, Redis is way more than this and this blog will explain you how you can make your backend systems faster and scalable. 
+
+
+![redis](/images/redispic.jpg)
+
+## What is Redis? 
+<br/>
+Redis (Remote Dictionary Server) is an open-source, in-memory data structure store that can be used as a lot of things and the best part is that it's fast and basically made for extremely fast read and write operations. 
+Some of those operations are: 
+
+- As a database
+- caching 
+- message broker
+- queues 
+and many more use-cases.
+
+## When do you use Redis? 
+
+Now, the question comes when to really use Redis or a better question can be that when do I know as a backend engineer that I need Redis? 
+
+So, mostly you need Redis to be used in your system when you need really fast read/write operations for low latency or maybe even temporary storage. 
+
+Let's understand this with an example : 
+
+![otp](/images/redisotp.png)
+
+
+
+
+This is just one of the use-case that I personally encountered while I built a backend system.
+
+With this you have a basic picture around when to use Redis and in what condition.
+
+<br/>
+<hr/>
+<br/>
+
+## Why is Redis so Fast? 
+<br/>
+
+Redis has the data in-memory. That's really important to understand here. 
+
+The data reads and writes in memory are generally WAY faster than disk I/O.
+
+
+![speed](/images/redispeed.png)
+
+Here is a comparison between the I/O speeds for each layer of memory.
+
+As you can see, this basically shows that Redis is  operating **millions of times faster** than any database hitting disk or a network.
+
+One of the most important factors that contributes to this performance is also.
+
+the **SINGLE THREADED** nature of Redis.
+
+Redis prefers a single thread for executing the whole task, to avoid latency issues ensuring task is executed fast. 
+
+Single-threaded approach suits Redis as the whole idea is about fast I/O operations. 
+Parallel processing might sound nice, but having a single-threaded approach makes tasks execute faster with lower latency, resulting in fast operations.
+
+Redis prevents conditions like *cache misses* or *cache thrashing* -> basically threads competing with each other for access of the space. 
+
+<br/>
+<hr/>
+<br/>
+
+**But you would think, if it takes up data from RAM, won't the data get deleted after the server is closed or the app closes?**
+
+WELL Redis provides you with *Data persistence*.
+
+
+
+## Data Persistence
+<br/>
+
+First, let’s understand what data persistence is.
+
+**Data persistence** basically means  that the data continues to exist even after the program that created it stops running, or system restarts, crashes or a new windows update borked my system.
+
+In simple terms : *Persistent data outlives the process that created it.*
+
+
+Redis provides the following configurable approaches to the user: 
+
+1. **AOF - Append Only File*** 
+	 - AOF is a really good mechanism in Redis to ensure in-memory data is saved.
+	 - Instead of periodic snapshots, Redis logs each operation in the same order it was executed here. 
+	 - This AOF basically acts like a *log file* so when the server restarts the operations can be retrieved fast. 
+
+ 2. **RDB - Redis Database**
+	-  takes point-in-time snapshots of the dataset at periodic time intervals. 
+	- Saves the snapshot as an .rdb file. 
+	-  It's fast and really compact.
+
+3. Hybrid Approach - AOF and RDB 
+	- Users can enable both for speed and periodic snapshots. 
+
+
+4.  No persistence 
+	- Users can literally disable persistence, this is helpful if the dataset is really small or persistence is not needed for that use-case.
+
+
+<br/>
+<hr/>
+<br/>
+
+
+## What about memory safety? 
+<br/>
+
+One of the plus points of Redis is that it's written in C. 
+The memory is managed manually but follows strict coding standards. 
+
+
+- Redis has something called *SDS (Simple Dynamic String)*
+	- Instead of using the raw C strings, it uses a custom string implementation.
+	- It tracks string length, allocates memory dynamically, and always ensures the string is null-terminated.
+
+ - This prevents C from buffer overflows or string corruptions. 
+
+
+**Internal Object Abstraction**
+
+- Redis wraps all values stored in the database  to enable **memory-efficient** storage and 
+safe memory management. 
+
+- The core of this system is the **redisObject** struct.
+
+All the data is presented by this struct with necessary metadata.
+
+**redisObject** consists of the following.
+
+- *type* - A 4-bit field that indicates the basic data-type (eg: string, list, hash, set etc..)
+- *encoding* - A 4 bit field that specifies internal data structure used for the value. 
+- *lru* - A 24-bit field used for **Least Recently Used** eviction policy, helps in knowing the last access time of the object 
+- *refcount* - This holds the object's reference count, helps in secure memory management and ownership sharing.
+- *ptr* - A pointer to the actual data structure holding the value. The type and encoding are important to determine the data 
+
+
+
+![object](/images/redisObject.png)
+
+Here is an example of  how a redisObject is represented.
+
+For a small integer -> in the ptr -> the value is directly stored.
+
+type -> is for a string type and stays *REDIS_STRING*
+
+Redis dynamically switches internal encoding for a data type based on the size of the data and the space in the memory. from the given example: 
+
+**encoding** -> for small integers it stays *REDIS_ENCODING_INT* 
+but when the value grows bigger it's converted into a SDS string then the encoding becomes *REDIS_ENCODING_STRING*.
+
+
+<br/>
+<hr/>
+<br/>
+
+
+## Use Cases 
+<br/>
+
+I gave one of the use-cases I encountered before which is for *caching* OTPs
+
+Apart from caching values or objects, 
+
+Redis can also be used as a **regular database** but really good for **real-time updates** as Redis is really fast. 
+
+![redisdb](/images/redisdb.png)
+
+Here is one of those examples.
+
+<br/>
+<hr/>
+<br/>
+
+This is my experience and knowledge I have so far on Redis. I might write another blog about Redis which goes in-depth of the architecture of Redis and it's single threaded nature.
+
+Hope you had a nice read! :)
+
