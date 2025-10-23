@@ -1,7 +1,6 @@
 import Link from "next/link";
 import getPostMetaData from "./getPostMetadata";
 
-
 const posts = getPostMetaData()
   .sort((a, b) => new Date(b.date).getTime() - new Date(a.date).getTime())
   .slice(0, 2);
@@ -13,13 +12,18 @@ export default function BlogSection() {
       <div className="space-y-6 mb-4">
         {posts.map((post) => (
           <Link key={post.slug} href={`/blog/${post.slug}`}>
-            <div className="flex items-baseline justify-between mb-1 group">  
-              <h3 className="text-xl font-semibold text-white group-hover:text-orange-500 transition-colors mb-1">
-                {post.title}
-              </h3>
-              <p className="text-sm text-white/50 mb-2">
-                {formatDate(post.date)}
-              </p>
+            <div className="group cursor-pointer">
+           
+              <div className="flex items-baseline justify-between mb-2">
+                <h3 className="text-xl font-semibold text-white group-hover:text-orange-500 transition-colors">
+                  {post.title}
+                </h3>
+                <span className="text-sm text-white/50 ml-4 flex-shrink-0">
+                  {formatDate(post.date)}
+                </span>
+              </div>
+              
+             
               {post.excerpt && (
                 <p className="text-base text-white/50 leading-relaxed">
                   {post.excerpt}
