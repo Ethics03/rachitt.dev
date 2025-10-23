@@ -93,7 +93,7 @@ In simple terms : *Persistent data outlives the process that created it.*
 
 Redis provides the following configurable approaches to the user: 
 
-1. **AOF - Append Only File*** 
+1. **AOF - Append Only File**
 	 - AOF is a really good mechanism in Redis to ensure in-memory data is saved.
 	 - Instead of periodic snapshots, Redis logs each operation in the same order it was executed here. 
 	 - This AOF basically acts like a *log file* so when the server restarts the operations can be retrieved fast. 
@@ -103,11 +103,11 @@ Redis provides the following configurable approaches to the user:
 	- Saves the snapshot as an .rdb file. 
 	-  It's fast and really compact.
 
-3. Hybrid Approach - AOF and RDB 
+3. **Hybrid Approach - AOF and RDB**
 	- Users can enable both for speed and periodic snapshots. 
 
 
-4.  No persistence 
+4.  **No persistence**
 	- Users can literally disable persistence, this is helpful if the dataset is really small or persistence is not needed for that use-case.
 
 
