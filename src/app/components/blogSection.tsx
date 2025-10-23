@@ -8,14 +8,14 @@ const posts = getPostMetaData()
 export default function BlogSection() {
   return (
     <div className="mb-12">
-      <h2 className="font-bold mb-6 text-2xl">$ blog</h2>
+      <h2 className="font-bold mb-6 text-3xl">$ blog</h2>
       <div className="space-y-6 mb-4">
         {posts.map((post) => (
           <Link key={post.slug} href={`/blog/${post.slug}`}>
             <div className="group cursor-pointer">
            
               <div className="flex items-baseline justify-between mb-2">
-                <h3 className="text-xl font-semibold text-white group-hover:text-orange-500 transition-colors">
+                <h3 className="text-lg font-semibold text-white group-hover:text-orange-500 transition-colors">
                   {post.title}
                 </h3>
                 <span className="text-sm text-white/50 ml-4 flex-shrink-0">
