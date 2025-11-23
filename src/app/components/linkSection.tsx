@@ -4,13 +4,7 @@ import { socials } from "../lib/socials";
 
 export default function LinkSection() {
   return (
-    <motion.div
-      initial={{ opacity: 0 }}
-      animate={{ opacity: 1 }}
-      transition={{ delay: 0.8 }}
-      className="mb-12"
-    >
-
+    <div className="mb-12">
       <div className="text-white/60 mb-8">
         <p className="mb-2">Want to chat?</p>
         <a
@@ -39,6 +33,6 @@ export default function LinkSection() {
           </div>
         </div>
       </div>
-    </motion.div>
+    </div>
   );
 }

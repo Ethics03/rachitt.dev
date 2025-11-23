@@ -18,7 +18,7 @@ export const metadata: Metadata = {
   title: "rachit's space",
   description: "backend engineer and devops/cloud enthusiast.",
   icons: {
-    icon: "/favicon.ico",  
+    icon: "/favicon.ico",
     shortcut: "/favicon.ico",
   },
 };
@@ -33,7 +33,7 @@ export default function RootLayout({
       <body
         className={`${geistSans.variable} ${jetBrainsMono.variable} min-h-screen flex flex-col antialiased`}
       >
-        <div className="w-full max-w-5xl mx-auto px-4">
+        <div className="w-full max-w-5xl mx-auto px-12">
           <Header />
           <main className="flex-1">{children}</main>
         </div>

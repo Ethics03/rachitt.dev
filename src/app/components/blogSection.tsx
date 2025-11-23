@@ -13,17 +13,15 @@ export default function BlogSection() {
         {posts.map((post) => (
           <Link key={post.slug} href={`/blog/${post.slug}`}>
             <div className="group cursor-pointer">
-           
               <div className="flex items-baseline justify-between mb-2">
-                <h3 className="text-lg font-semibold text-white group-hover:text-orange-500 transition-colors">
+                <h3 className="text-md font-semibold text-white group-hover:text-orange-500 transition-colors">
                   {post.title}
                 </h3>
                 <span className="text-sm text-white/50 ml-4 flex-shrink-0">
                   {formatDate(post.date)}
                 </span>
               </div>
-              
-             
+
               {post.excerpt && (
                 <p className="text-base text-white/50 leading-relaxed">
                   {post.excerpt}

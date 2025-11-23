@@ -4,7 +4,6 @@ import ProjectsSection from "./components/projectSection";
 import BlogSection from "./components/blogSection";
 import LinkSection from "./components/linkSection";
 
-
 export default function Home() {
   return (
     <div className="flex items-center pt-10">
@@ -13,8 +12,7 @@ export default function Home() {
         <WorkSection />
         <ProjectsSection />
         <BlogSection />
-        <LinkSection/>
-
+        <LinkSection />
       </div>
     </div>
   );
