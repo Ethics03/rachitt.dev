@@ -15,7 +15,7 @@ export default function WorkSection() {
                 {item.company}
               </h3>
               <p className="text-lg text-white/70 mb-2">{item.role}</p>
-              <p className="text-base text-white/50 leading-relaxed mb-2">
+              <p className="text-base text-white/80 leading-relaxed mb-7">
                 {item.description}
               </p>
             </motion.div>

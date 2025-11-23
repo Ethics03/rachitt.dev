@@ -6,7 +6,7 @@ import { ArrowUpRightIcon } from "@phosphor-icons/react/dist/ssr";
 
 export default function Projects() {
   return (
-    <div className="flex items-center pt-10">
+    <div className="flex items-center pt-10 pb-12">
       <div className="w-full">
         <h1 className="text-5xl md:text-4xl font-bold mb-6">
           <ScrambleText text="$ projects" />
