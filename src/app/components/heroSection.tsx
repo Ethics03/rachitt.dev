@@ -15,10 +15,11 @@ export default function HeroSection() {
           bengaluru, india
         </div>
       </div>
-      <p className="text-xl text-white/70 leading-relaxed mb-12">
-        backend developer who loves building systems and cli tools. i mostly
-        work with rust, go, and typescript. currently working on my startup and
-        shipping side projects.
+      <p className=" text-white/90 leading-relaxed mb-12">
+        a developer who loves to build stuff and solve problems on the way. i
+        enjoy building scalable backend systems, cli tools, apps, low-level
+        programming, and diving into system architecture and computer science.
+        when i'm not coding, i'm usually listening to music or shuffling cards.
       </p>
     </>
   );

@@ -32,12 +32,14 @@ body {
 
 
 html {
-    font-size: 13px;
+    font-size: 13.5px;
+    letter-spacing: 0.015em;
 }
 
 @media (min-width: 768px) {
     html {
-        font-size: 14px;
+        font-size: 15px;
+        letter-spacing: 0.015em;
     }
 }
 

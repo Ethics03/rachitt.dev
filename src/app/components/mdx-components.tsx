@@ -7,9 +7,7 @@ export function useMDXComponents(components: MDXComponents): MDXComponents {
   return {
     // Headings
     h1: ({ children }) => (
-      <h1 className="text-4xl font-bold mb-6 mt-8 text-white">
-        {children}
-      </h1>
+      <h1 className="text-4xl font-bold mb-6 mt-8 text-white">{children}</h1>
     ),
     h2: ({ children }) => (
       <h2 className="text-3xl font-semibold mb-4 mt-6 text-white">
@@ -22,14 +20,10 @@ export function useMDXComponents(components: MDXComponents): MDXComponents {
       </h3>
     ),
     h4: ({ children }) => (
-      <h4 className="text-xl font-semibold mb-2 mt-4 text-white">
-        {children}
-      </h4>
+      <h4 className="text-xl font-semibold mb-2 mt-4 text-white">{children}</h4>
     ),
     h5: ({ children }) => (
-      <h5 className="text-lg font-semibold mb-2 mt-3 text-white">
-        {children}
-      </h5>
+      <h5 className="text-lg font-semibold mb-2 mt-3 text-white">{children}</h5>
     ),
     h6: ({ children }) => (
       <h6 className="text-base font-semibold mb-2 mt-3 text-white">
@@ -39,20 +33,12 @@ export function useMDXComponents(components: MDXComponents): MDXComponents {
 
     // Text elements
     p: ({ children }) => (
-      <p className="mb-4 text-gray-300 leading-relaxed">
-        {children}
-      </p>
+      <p className="mb-4 text-white/80 leading-relaxed">{children}</p>
     ),
     strong: ({ children }) => (
-      <strong className="font-semibold text-white">
-        {children}
-      </strong>
+      <strong className="font-semibold text-white">{children}</strong>
     ),
-    em: ({ children }) => (
-      <em className="italic text-gray-200">
-        {children}
-      </em>
-    ),
+    em: ({ children }) => <em className="italic text-gray-200">{children}</em>,
 
     // Lists
     ul: ({ children }) => (
@@ -65,11 +51,7 @@ export function useMDXComponents(components: MDXComponents): MDXComponents {
         {children}
       </ol>
     ),
-    li: ({ children }) => (
-      <li className="text-gray-300">
-        {children}
-      </li>
-    ),
+    li: ({ children }) => <li className="text-gray-300">{children}</li>,
 
     // Links
     a: ({ href, children }) => (
@@ -84,20 +66,19 @@ export function useMDXComponents(components: MDXComponents): MDXComponents {
     // Code
     code: ({ children, className }) => {
       // If it's inside a pre tag (code block), let pre handle it
-      if (className?.includes('language-')) {
+      if (className?.includes("language-")) {
         return <code className={className}>{children}</code>;
       }
       // Inline code
       return (
-        <code className="bg-gray-800 text-orange-300 px-2 py-1 rounded text-sm font-mono">
+        <code className="bg-gray-700 text-orange-300 px-2 py-1 rounded text-sm font-mono">
           {children}
         </code>
       );
     },
     pre: ({ children }) => {
-     
       const codeElement = children?.props;
-      if (codeElement?.className?.includes('language-')) {
+      if (codeElement?.className?.includes("language-")) {
         return (
           <ShikiCodeBlock className={codeElement.className}>
             {codeElement.children}
@@ -120,9 +101,7 @@ export function useMDXComponents(components: MDXComponents): MDXComponents {
     ),
 
     // Horizontal rule
-    hr: () => (
-      <hr className="my-8 border-gray-700" />
-    ),
+    hr: () => <hr className="my-8 border-gray-700" />,
 
     // Images
     img: (props) => (
@@ -144,20 +123,10 @@ export function useMDXComponents(components: MDXComponents): MDXComponents {
         </table>
       </div>
     ),
-    thead: ({ children }) => (
-      <thead className="bg-gray-800">
-        {children}
-      </thead>
-    ),
-    tbody: ({ children }) => (
-      <tbody>
-        {children}
-      </tbody>
-    ),
+    thead: ({ children }) => <thead className="bg-gray-800">{children}</thead>,
+    tbody: ({ children }) => <tbody>{children}</tbody>,
     tr: ({ children }) => (
-      <tr className="border-b border-gray-700">
-        {children}
-      </tr>
+      <tr className="border-b border-gray-700">{children}</tr>
     ),
     th: ({ children }) => (
       <th className="border border-gray-700 px-4 py-2 text-left font-semibold text-white">

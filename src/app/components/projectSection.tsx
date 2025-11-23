@@ -14,8 +14,8 @@ export default function ProjectsSection() {
               <h3 className="text-lg font-semibold text-white group-hover:text-orange-500 transition-colors mb-1">
                 {project.name}
               </h3>
-              <p className="text-lg text-white/70 mb-2">{project.role}</p>
-              <p className="text-base text-white/50 leading-relaxed mb-7">
+              <p className=" text-gray-400 mb-2">{project.role}</p>
+              <p className="text-white/90 leading-relaxed mb-7">
                 {project.description}
               </p>
             </motion.div>
