@@ -16,7 +16,7 @@ const jetBrainsMono = JetBrains_Mono({
 
 export const metadata: Metadata = {
   title: "rachit's space",
-  description: "backend engineer and devops/cloud enthusiast.",
+  description: "engineer who likes building things on the internet.",
   icons: {
     icon: "/favicon.ico",
     shortcut: "/favicon.ico",
