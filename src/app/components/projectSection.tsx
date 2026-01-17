@@ -11,7 +11,7 @@ export default function ProjectsSection() {
         {projects.slice(0, 2).map((project, index) => (
           <Link key={project.name} href={project.link}>
             <motion.div whileHover={{ x: 4 }} className="cursor-pointer group">
-              <h3 className="text-lg font-semibold text-white group-hover:text-orange-500 transition-colors mb-1">
+              <h3 className="text-lg font-semibold text-white group-hover:text-accent transition-colors mb-1">
                 {project.name}
               </h3>
               <p className=" text-gray-400 mb-2">{project.role}</p>
@@ -25,7 +25,7 @@ export default function ProjectsSection() {
       <Link href="/projects">
         <motion.div
           whileHover={{ x: 4 }}
-          className="text-base text-orange-500 hover:translate-x-1 transition-all cursor-pointer"
+          className="text-base text-accent hover:translate-x-1 transition-all cursor-pointer"
         >
           view all projects →
         </motion.div>

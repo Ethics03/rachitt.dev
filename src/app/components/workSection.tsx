@@ -11,7 +11,7 @@ export default function WorkSection() {
         {work.map((item) => (
           <Link key={item.company} href={item.href}>
             <motion.div whileHover={{ x: 4 }} className="cursor-pointer group">
-              <h3 className="text-lg font-semibold text-white group-hover:text-orange-500 transition-colors mb-1">
+              <h3 className="text-lg font-semibold text-white group-hover:text-accent transition-colors mb-1">
                 {item.company}
               </h3>
               <p className=" text-gray-400 mb-2">{item.role}</p>

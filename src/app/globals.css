@@ -8,6 +8,7 @@
 @theme inline {
     --color-background: var(--background);
     --color-foreground: var(--foreground);
+    --color-accent: #9FBF7F;
     --font-family-sans: var(--font-jetbrains-mono);
     --font-family-mono: var(--font-jetbrains-mono);
 }

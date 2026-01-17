@@ -14,7 +14,7 @@ export default function BlogSection() {
           <Link key={post.slug} href={`/blog/${post.slug}`}>
             <div className="group cursor-pointer">
               <div className="flex items-baseline justify-between mb-2">
-                <h3 className="text-md font-semibold text-white/90 group-hover:text-orange-500 transition-colors">
+                <h3 className="text-md font-semibold text-white/90 group-hover:text-accent transition-colors">
                   {post.title}
                 </h3>
                 <span className="text-sm text-white/50 ml-4 flex-shrink-0">
@@ -32,7 +32,7 @@ export default function BlogSection() {
         ))}
       </div>
       <Link href="/blog">
-        <div className="text-base text-orange-500 hover:translate-x-1 transition-all cursor-pointer">
+        <div className="text-base text-accent hover:translate-x-1 transition-all cursor-pointer">
           view all posts →
         </div>
       </Link>

@@ -7,7 +7,7 @@ export default function HeroSection() {
   return (
     <>
       <h1 className="text-5xl md:text-4xl font-bold mb-6">
-        <ScrambleText text="$ rachit srivastava" />
+        <ScrambleText text="$ rachit's blog" />
       </h1>
       <div className="flex flex-col gap-2 text-gray-400 mb-2">
         <div className="flex items-center gap-2">

@@ -57,7 +57,7 @@ export function useMDXComponents(components: MDXComponents): MDXComponents {
     a: ({ href, children }) => (
       <Link
         href={href || "#"}
-        className="text-orange-400 hover:text-orange-300 underline transition-colors"
+        className="text-accent hover:text-accent/80 underline transition-colors"
       >
         {children}
       </Link>
@@ -71,7 +71,7 @@ export function useMDXComponents(components: MDXComponents): MDXComponents {
       }
       // Inline code
       return (
-        <code className="bg-gray-700 text-orange-300 px-2 py-1 rounded text-sm font-mono">
+        <code className="bg-gray-700 text-accent px-2 py-1 rounded text-sm font-mono">
           {children}
         </code>
       );
@@ -95,7 +95,7 @@ export function useMDXComponents(components: MDXComponents): MDXComponents {
 
     // Blockquotes
     blockquote: ({ children }) => (
-      <blockquote className="border-l-4 border-orange-400 pl-4 my-4 italic text-gray-300 bg-gray-800/50 py-2 rounded-r">
+      <blockquote className="border-l-4 border-accent pl-4 my-4 italic text-gray-300 bg-gray-800/50 py-2 rounded-r">
         {children}
       </blockquote>
     ),

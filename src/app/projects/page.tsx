@@ -17,14 +17,14 @@ export default function Projects() {
             <a
               key={project.id}
               href={project.link}
-              className="p-5 border border-white/30 hover:border-orange-500 transition-colors duration-300 group relative"
+              className="p-5 border border-white/30 hover:border-accent transition-colors duration-300 group relative"
             >
               <div className="flex items-start justify-between mb-3">
-                <h2 className="text-3xl font-bold text-white group-hover:text-orange-500 transition-colors duration-300">
+                <h2 className="text-3xl font-bold text-white group-hover:text-accent transition-colors duration-300">
                   {project.name}
                 </h2>
                 <ArrowUpRightIcon
-                  className="text-white/50 group-hover:text-orange-500 transition-colors duration-300 flex-shrink-0"
+                  className="text-white/50 group-hover:text-accent transition-colors duration-300 flex-shrink-0"
                   size={24}
                 />
               </div>
