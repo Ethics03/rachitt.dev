@@ -6,7 +6,7 @@ export default function About() {
           <span className="text-accent">&gt;</span> about me
         </h1>
 
-        <div className="text-lg text-white/80 leading-relaxed space-y-6">
+        <div className="text-white/80 leading-relaxed space-y-6">
           <p>
             I'm Rachit Srivastava. I like to make backend systems and love
             low-level programming. I also enjoy using Linux, currently I'm using
@@ -21,7 +21,7 @@ export default function About() {
             journey.
           </p>
 
-          <div className="pl-8 font-mono text-lg text-white/70">
+          <div className="pl-8 font-mono text-white/70">
             <p>My setup includes:</p>
             <div className="mt-2 space-y-1">
               <p>~ neovim</p>
@@ -40,7 +40,7 @@ export default function About() {
 
         </div>
 
-        <div className="mt-8 flex gap-4 text-lg">
+        <div className="mt-8 flex gap-4">
           <span className="text-white/50">Based in</span>
           <span className="font-bold">Bengaluru, India </span>
         </div>
