@@ -7,7 +7,7 @@ export default function BlogPage() {
   return (
     <div className="flex items-center pt-10">
       <div className="w-full">
-        <h1 className="text-5xl md:text-4xl font-bold mb-6">
+        <h1 className="text-3xl md:text-4xl font-bold mb-6">
           <span className="text-accent">&gt;</span> blogs
         </h1>
 
@@ -19,7 +19,7 @@ export default function BlogPage() {
               className="block group hover:text-accent transition-colors"
             >
               <div className="flex items-baseline justify-between gap-4 mb-1">
-                <h2 className="text-lg font-semibold group-hover:text-accent transition-colors">
+                <h2 className="text-xs md:text-lg font-semibold group-hover:text-accent transition-colors">
                   {post.title}
                 </h2>
                 <p className="text-sm text-gray-400 flex-shrink-0">
