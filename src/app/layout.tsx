@@ -5,7 +5,7 @@ import Header from "./components/Header";
 import { CommandPalette } from "@/components/CommandPalette";
 import getPostMetadata from "./components/getPostMetadata";
 import { projects } from "./lib/projects";
-
+import GlobalShortcuts from "./components/GlobalShortcuts";
 const geistSans = Geist({
   variable: "--font-geist-sans",
   subsets: ["latin"],
@@ -38,6 +38,7 @@ export default function RootLayout({
       <body
         className={`${geistSans.variable} ${jetBrainsMono.variable} min-h-screen flex flex-col antialiased`}
       >
+        <GlobalShortcuts />
         <CommandPalette posts={posts} projects={projects} />
         <div className="w-full max-w-5xl mx-auto px-8">
           <Header />
