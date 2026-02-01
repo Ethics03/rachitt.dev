@@ -27,6 +27,7 @@ export default function About() {
               <p>~ neovim</p>
               <p>~ tmux</p>
               <p>~ fish shell</p>
+              <p>~ claude code</p>
               <p>~ spotify</p>
             </div>
           </div>
