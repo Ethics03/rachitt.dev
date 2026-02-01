@@ -38,10 +38,6 @@ export default function About() {
             something useful for people.
           </p>
 
-          <p className="text-white/60 text-lg italic">
-            Building something really cool that'll help you learn stuff fast and
-            preserve it.
-          </p>
         </div>
 
         <div className="mt-8 flex gap-4 text-lg">
