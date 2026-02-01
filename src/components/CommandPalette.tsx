@@ -24,6 +24,7 @@ import {
 } from "@/components/ui/command";
 import type { PostMetaData } from "@/app/components/getPostMetadata";
 import { socials } from "@/app/lib/socials";
+import { useEffect } from "react";
 
 type Project = {
   id: number;
@@ -45,16 +46,17 @@ export function CommandPalette({
   const [open, setOpen] = React.useState(false);
   const router = useRouter();
 
-  React.useEffect(() => {
+  useEffect(() => {
     const down = (e: KeyboardEvent) => {
       if (e.key === "k" && (e.metaKey || e.ctrlKey)) {
         e.preventDefault();
+        e.stopImmediatePropagation();
+
         setOpen((open) => !open);
       }
     };
-
-    document.addEventListener("keydown", down);
-    return () => document.removeEventListener("keydown", down);
+    document.addEventListener("keydown", down, true);
+    return () => document.removeEventListener("keydown", down, true);
   }, []);
 
   const runCommand = React.useCallback((command: () => void) => {
