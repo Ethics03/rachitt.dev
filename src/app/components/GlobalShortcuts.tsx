@@ -12,11 +12,7 @@ export default function GlobalShortcuts() {
       const target = e.target as HTMLElement;
       const tag = target.tagName.toLowerCase();
 
-      if (
-        tag === "input" ||
-        tag === "textarea" ||
-        target.isContentEditable
-      ) {
+      if (tag === "input" || tag === "textarea" || target.isContentEditable) {
         return;
       }
 
@@ -39,4 +35,3 @@ export default function GlobalShortcuts() {
 
   return null;
 }
-

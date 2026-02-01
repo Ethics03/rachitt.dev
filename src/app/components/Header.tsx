@@ -15,14 +15,11 @@ export default function Header() {
     return pathname.startsWith(href);
   };
 
-
-  // conditional highlighting 
+  // conditional highlighting
   const linkClass = (href: string) =>
     clsx(
       "transition-colors",
-      isActive(href)
-        ? "text-accent"
-        : "text-white hover:text-accent"
+      isActive(href) ? "text-accent" : "text-white hover:text-accent",
     );
 
   return (
@@ -42,4 +39,3 @@ export default function Header() {
     </header>
   );
 }
-

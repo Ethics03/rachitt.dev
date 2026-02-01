@@ -6,6 +6,7 @@ import { CommandPalette } from "@/components/CommandPalette";
 import getPostMetadata from "./components/getPostMetadata";
 import { projects } from "./lib/projects";
 import GlobalShortcuts from "./components/GlobalShortcuts";
+
 const geistSans = Geist({
   variable: "--font-geist-sans",
   subsets: ["latin"],
