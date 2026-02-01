@@ -12,10 +12,7 @@ export default function Header() {
         <Link href="/blog" className="hover:text-accent transition-colors">
           [b] blog
         </Link>
-        <Link
-          href="/projects"
-          className="hover:text-accent transition-colors"
-        >
+        <Link href="/projects" className="hover:text-accent transition-colors">
           [p] projects
         </Link>
       </div>

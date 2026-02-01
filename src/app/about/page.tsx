@@ -1,29 +1,17 @@
-"use client";
-import { motion } from "framer-motion";
-import ScrambleText from "../components/ScrambleText";
-
 export default function About() {
   return (
-  <div className="h-full flex items-start md:items-center md:justify-center pt-6 pl-4 w-full">
-      <div className="flex flex-col gap-6 w-full max-w-md md:max-w-3xl">
-        <motion.h1
-          className="text-3xl font-bold"
-          initial={{ opacity: 0, x: -20 }}
-          animate={{ opacity: 1, x: 0 }}
-        >
-          <ScrambleText text="$ about me" />
-        </motion.h1>
+    <div className="flex items-center pt-10">
+      <div className="flex flex-col gap-6 w-full">
+        <h1 className="text-3xl font-bold">
+          <span className="text-accent">&gt;</span> about me
+        </h1>
 
-        <motion.div
-          initial={{ opacity: 0 }}
-          animate={{ opacity: 1 }}
-          transition={{ delay: 0.3 }}
-          className="text-lg text-white/80 leading-relaxed space-y-6"
-        >
+        <div className="text-lg text-white/80 leading-relaxed space-y-6">
           <p>
             I'm Rachit Srivastava. I like to make backend systems and love
             low-level programming. I also enjoy using Linux, currently I'm using
             Arch Linux as my main operating system.
+            currently:
           </p>
 
           <p>
@@ -54,17 +42,12 @@ export default function About() {
             Building something really cool that'll help you learn stuff fast and
             preserve it.
           </p>
-        </motion.div>
+        </div>
 
-        <motion.div
-          initial={{ opacity: 0, y: 20 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ delay: 0.6 }}
-          className="mt-8 flex gap-4 text-lg"
-        >
+        <div className="mt-8 flex gap-4 text-lg">
           <span className="text-white/50">Based in</span>
           <span className="font-bold">Bengaluru, India </span>
-        </motion.div>
+        </div>
       </div>
     </div>
   );

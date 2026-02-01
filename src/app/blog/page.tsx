@@ -1,6 +1,5 @@
 import getPostMetadata from "../components/getPostMetadata";
 import Link from "next/link";
-import ScrambleText from "../components/ScrambleText";
 
 export default function BlogPage() {
   const posts = getPostMetadata();
@@ -9,19 +8,21 @@ export default function BlogPage() {
     <div className="flex items-center pt-10">
       <div className="w-full">
         <h1 className="text-5xl md:text-4xl font-bold mb-6">
-          <ScrambleText text="$ blogs" />
+          <span className="text-accent">&gt;</span> blogs
         </h1>
 
-        <div className="w-full flex flex-col gap-4">
+        <div className="w-full flex flex-col gap-3">
           {posts.map((post) => (
             <Link
               key={post.slug}
               href={`/blog/${post.slug}`}
-              className="block p-3 border border-white/30 hover:border-accent transition-colors"
+              className="block group hover:text-accent transition-colors"
             >
-              <h2 className="text-2xl font-semibold mb-2">{post.title}</h2>
-              <p className="text-sm text-gray-400 mb-2">{post.date}</p>
-              {post.excerpt && <p className="text-gray-300">{post.excerpt}</p>}
+              <div className="flex items-baseline justify-between gap-4 mb-1">
+                <h2 className="text-lg font-semibold group-hover:text-accent transition-colors">{post.title}</h2>
+                <p className="text-sm text-gray-400 flex-shrink-0">{post.date}</p>
+              </div>
+              {post.excerpt && <p className="text-sm text-gray-400">{post.excerpt}</p>}
             </Link>
           ))}
         </div>

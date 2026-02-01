@@ -6,11 +6,11 @@ import { work } from "../lib/work";
 export default function WorkSection() {
   return (
     <div className="mb-12">
-      <h2 className="font-bold mb-6 text-3xl">$ work</h2>
+      <h2 className="font-bold mb-6 text-3xl"><span className="text-accent">&gt;</span> work</h2>
       <div className="space-y-6">
         {work.map((item) => (
           <Link key={item.company} href={item.href}>
-            <motion.div whileHover={{ x: 4 }} className="cursor-pointer group">
+            <div className="cursor-pointer group">
               <h3 className="text-lg font-semibold text-white group-hover:text-accent transition-colors mb-1">
                 {item.company}
               </h3>
@@ -18,7 +18,7 @@ export default function WorkSection() {
               <p className=" text-white/90 leading-relaxed mb-7">
                 {item.description}
               </p>
-            </motion.div>
+            </div>
           </Link>
         ))}
       </div>
