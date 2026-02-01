@@ -18,7 +18,7 @@ const jetBrainsMono = JetBrains_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "rachit's space",
+  title: "nev",
   description: "engineer who likes building things on the internet.",
   icons: {
     icon: "/favicon.ico",
