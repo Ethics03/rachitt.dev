@@ -27,7 +27,7 @@ export default function HeroSection() {
         </b>
       </p>
 
-      <div className="mb-12 hidden md:flex items-center gap-3 text-sm [&@media[pointer:coarse]:hidden">
+      <div className="hidden sm:block mb-12 md:flex items-center gap-3 text-sm">
         <span className="text-white/50">tip:</span>
         <div className="flex items-center gap-2 px-3 py-1.5 border border-accent/30 bg-accent/5 rounded">
           <kbd className="font-mono text-accent font-semibold">ctrl</kbd>
