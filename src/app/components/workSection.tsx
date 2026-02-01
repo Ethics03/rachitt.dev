@@ -6,7 +6,9 @@ import { work } from "../lib/work";
 export default function WorkSection() {
   return (
     <div className="mb-12">
-      <h2 className="font-bold mb-6 text-3xl"><span className="text-accent">&gt;</span> work</h2>
+      <h2 className="font-bold mb-6 text-3xl">
+        <span className="text-accent">&gt;</span> work
+      </h2>
       <div className="space-y-6">
         {work.map((item) => (
           <Link key={item.company} href={item.href}>

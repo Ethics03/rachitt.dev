@@ -20,8 +20,11 @@ export default function HeroSection() {
         programming, and diving into system architecture and computer science.
         when i'm not coding, i'm usually listening to music or shuffling cards.
         <br />
-        <b><span className="text-accent">currently:</span> working around concurrency, system architecture and distributed systems mostly in
-          <span className="text-accent"> go</span></b>
+        <b>
+          <span className="text-accent">currently:</span> working around
+          concurrency, system architecture and distributed systems mostly in
+          <span className="text-accent"> go</span>
+        </b>
       </p>
 
       <div className="mb-12 flex items-center gap-3 text-sm">

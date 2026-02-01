@@ -8,7 +8,10 @@ interface ShikiCodeBlockProps {
   className?: string;
 }
 
-export default function ShikiCodeBlock({ children, className }: ShikiCodeBlockProps) {
+export default function ShikiCodeBlock({
+  children,
+  className,
+}: ShikiCodeBlockProps) {
   const [html, setHtml] = useState<string>("");
   const [isLoading, setIsLoading] = useState(true);
 
@@ -16,20 +19,39 @@ export default function ShikiCodeBlock({ children, className }: ShikiCodeBlockPr
     async function highlightCode() {
       try {
         const highlighter = await createHighlighter({
-          themes: ['github-dark'],
-          langs: ['javascript', 'typescript', 'jsx', 'tsx', 'python', 'bash', 'json', 'css', 'html', 'markdown', 'sql', 'yaml', 'toml', 'go', 'rust', 'java', 'c', 'cpp'],
+          themes: ["github-dark"],
+          langs: [
+            "javascript",
+            "typescript",
+            "jsx",
+            "tsx",
+            "python",
+            "bash",
+            "json",
+            "css",
+            "html",
+            "markdown",
+            "sql",
+            "yaml",
+            "toml",
+            "go",
+            "rust",
+            "java",
+            "c",
+            "cpp",
+          ],
         });
 
-        const language = className?.replace('language-', '') || 'text';
-        
+        const language = className?.replace("language-", "") || "text";
+
         const highlightedHtml = highlighter.codeToHtml(children, {
           lang: language,
-          theme: 'github-dark',
+          theme: "github-dark",
         });
 
         setHtml(highlightedHtml);
       } catch (error) {
-        console.error('Error highlighting code:', error);
+        console.error("Error highlighting code:", error);
         setHtml(`<pre><code>${children}</code></pre>`);
       } finally {
         setIsLoading(false);
@@ -48,7 +70,7 @@ export default function ShikiCodeBlock({ children, className }: ShikiCodeBlockPr
   }
 
   return (
-    <div 
+    <div
       className="my-4 rounded-lg overflow-hidden border border-gray-700 bg-gray-950"
       dangerouslySetInnerHTML={{ __html: html }}
     />

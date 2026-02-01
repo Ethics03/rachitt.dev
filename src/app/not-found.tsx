@@ -11,7 +11,6 @@ export default function NotFound() {
         transition={{ duration: 0.6 }}
         className="text-center space-y-6"
       >
-     
         <motion.h1
           initial={{ scale: 0.5, opacity: 0 }}
           animate={{ scale: 1, opacity: 1 }}
@@ -21,7 +20,6 @@ export default function NotFound() {
           404
         </motion.h1>
 
-      
         <motion.div
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}

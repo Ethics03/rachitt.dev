@@ -7,7 +7,9 @@ import { projects } from "../lib/projects";
 export default function ProjectsSection() {
   return (
     <div className="mb-12">
-      <h2 className="font-bold mb-6 text-3xl"><span className="text-accent">&gt;</span> projects</h2>
+      <h2 className="font-bold mb-6 text-3xl">
+        <span className="text-accent">&gt;</span> projects
+      </h2>
       <div className="space-y-6 mb-4">
         {projects.slice(0, 2).map((project, index) => (
           <Link key={project.name} href={project.link}>

@@ -2,81 +2,81 @@
 @import "tw-animate-css";
 
 :root {
-    --background: #161616;
-    --foreground: #e0e0e0;
+  --background: #161616;
+  --foreground: #e0e0e0;
 }
 
 @theme inline {
-    --color-background: var(--background);
-    --color-foreground: var(--foreground);
-    --color-accent: #9fbf7f;
-    --font-family-sans: var(--font-jetbrains-mono);
-    --font-family-mono: var(--font-jetbrains-mono);
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --color-accent: #9fbf7f;
+  --font-family-sans: var(--font-jetbrains-mono);
+  --font-family-mono: var(--font-jetbrains-mono);
 
-    /* shadcn Command palette colors - mapped to Everforest dark theme */
-    --color-primary: #9fbf7f;
-    --color-primary-foreground: #161616;
-    --color-muted: #2a2a2a;
-    --color-muted-foreground: #a0a0a0;
-    --color-border: rgba(255, 255, 255, 0.1);
-    --color-input: rgba(255, 255, 255, 0.1);
-    --color-ring: #9fbf7f;
-    --color-card: #1e1e1e;
-    --color-card-foreground: #e0e0e0;
-    --color-popover: #1e1e1e;
-    --color-popover-foreground: #e0e0e0;
-    --color-secondary: #2a2a2a;
-    --color-secondary-foreground: #e0e0e0;
-    --color-accent-foreground: #161616;
-    --color-destructive: #e67e80;
+  /* shadcn Command palette colors - mapped to Everforest dark theme */
+  --color-primary: #9fbf7f;
+  --color-primary-foreground: #161616;
+  --color-muted: #2a2a2a;
+  --color-muted-foreground: #a0a0a0;
+  --color-border: rgba(255, 255, 255, 0.1);
+  --color-input: rgba(255, 255, 255, 0.1);
+  --color-ring: #9fbf7f;
+  --color-card: #1e1e1e;
+  --color-card-foreground: #e0e0e0;
+  --color-popover: #1e1e1e;
+  --color-popover-foreground: #e0e0e0;
+  --color-secondary: #2a2a2a;
+  --color-secondary-foreground: #e0e0e0;
+  --color-accent-foreground: #161616;
+  --color-destructive: #e67e80;
 
-    --radius-sm: calc(0.5rem - 4px);
-    --radius-md: calc(0.5rem - 2px);
-    --radius-lg: 0.5rem;
-    --radius-xl: calc(0.5rem + 4px);
-    --radius-2xl: calc(0.5rem + 8px);
-    --radius-3xl: calc(0.5rem + 12px);
-    --radius-4xl: calc(0.5rem + 16px);
+  --radius-sm: calc(0.5rem - 4px);
+  --radius-md: calc(0.5rem - 2px);
+  --radius-lg: 0.5rem;
+  --radius-xl: calc(0.5rem + 4px);
+  --radius-2xl: calc(0.5rem + 8px);
+  --radius-3xl: calc(0.5rem + 12px);
+  --radius-4xl: calc(0.5rem + 16px);
 }
 
 * {
-    font-family: var(--font-jetbrains-mono);
+  font-family: var(--font-jetbrains-mono);
 }
 
 body {
-    background: var(--background);
-    color: var(--foreground);
-    font-family: var(--font-jetbrains-mono);
-    line-height: 1.6;
+  background: var(--background);
+  color: var(--foreground);
+  font-family: var(--font-jetbrains-mono);
+  line-height: 1.6;
 }
 
 html {
-    font-size: 13.5px;
-    letter-spacing: 0.015em;
+  font-size: 13.5px;
+  letter-spacing: 0.015em;
 }
 
 @media (min-width: 768px) {
-    html {
-        font-size: 15px;
-        letter-spacing: 0.015em;
-    }
+  html {
+    font-size: 15px;
+    letter-spacing: 0.015em;
+  }
 }
 
 @media (max-width: 768px) {
-    h1 {
-        font-size: 1.75rem !important;
-    }
+  h1 {
+    font-size: 1.75rem !important;
+  }
 
-    h2 {
-        font-size: 1.5rem !important;
-    }
+  h2 {
+    font-size: 1.5rem !important;
+  }
 
-    h3 {
-        font-size: 1.25rem !important;
-    }
+  h3 {
+    font-size: 1.25rem !important;
+  }
 
-    p,
-    div {
-        font-size: 0.875rem;
-    }
+  p,
+  div {
+    font-size: 0.875rem;
+  }
 }

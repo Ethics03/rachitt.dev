@@ -38,7 +38,10 @@ type CommandPaletteProps = {
   projects?: Project[];
 };
 
-export function CommandPalette({ posts = [], projects = [] }: CommandPaletteProps) {
+export function CommandPalette({
+  posts = [],
+  projects = [],
+}: CommandPaletteProps) {
   const [open, setOpen] = React.useState(false);
   const router = useRouter();
 
@@ -65,15 +68,11 @@ export function CommandPalette({ posts = [], projects = [] }: CommandPaletteProp
       <CommandList>
         <CommandEmpty>No results found.</CommandEmpty>
         <CommandGroup heading="Navigation">
-          <CommandItem
-            onSelect={() => runCommand(() => router.push("/"))}
-          >
+          <CommandItem onSelect={() => runCommand(() => router.push("/"))}>
             <House className="text-white/70 group-data-[selected=true]:text-black" />
             <span>Home</span>
           </CommandItem>
-          <CommandItem
-            onSelect={() => runCommand(() => router.push("/about"))}
-          >
+          <CommandItem onSelect={() => runCommand(() => router.push("/about"))}>
             <User className="text-white/70 group-data-[selected=true]:text-black" />
             <span>About</span>
           </CommandItem>
@@ -83,9 +82,7 @@ export function CommandPalette({ posts = [], projects = [] }: CommandPaletteProp
             <FolderOpen className="text-white/70 group-data-[selected=true]:text-black" />
             <span>Projects</span>
           </CommandItem>
-          <CommandItem
-            onSelect={() => runCommand(() => router.push("/blog"))}
-          >
+          <CommandItem onSelect={() => runCommand(() => router.push("/blog"))}>
             <FileText className="text-white/70 group-data-[selected=true]:text-black" />
             <span>Blog</span>
           </CommandItem>
@@ -98,7 +95,9 @@ export function CommandPalette({ posts = [], projects = [] }: CommandPaletteProp
               {posts.map((post) => (
                 <CommandItem
                   key={post.slug}
-                  onSelect={() => runCommand(() => router.push(`/blog/${post.slug}`))}
+                  onSelect={() =>
+                    runCommand(() => router.push(`/blog/${post.slug}`))
+                  }
                   value={`${post.title} ${post.excerpt || ""}`}
                 >
                   <FileText className="text-white/70 group-data-[selected=true]:text-black" />
@@ -111,7 +110,9 @@ export function CommandPalette({ posts = [], projects = [] }: CommandPaletteProp
                     )}
                   </div>
                   <Calendar className="ml-auto text-white/50 group-data-[selected=true]:text-black" />
-                  <span className="text-xs text-white/50 group-data-[selected=true]:text-black">{post.date}</span>
+                  <span className="text-xs text-white/50 group-data-[selected=true]:text-black">
+                    {post.date}
+                  </span>
                 </CommandItem>
               ))}
             </CommandGroup>
@@ -146,7 +147,10 @@ export function CommandPalette({ posts = [], projects = [] }: CommandPaletteProp
           <CommandItem
             onSelect={() =>
               runCommand(() =>
-                window.open(socials.find(s => s.name === "github")?.href, "_blank"),
+                window.open(
+                  socials.find((s) => s.name === "github")?.href,
+                  "_blank",
+                ),
               )
             }
           >
@@ -156,7 +160,10 @@ export function CommandPalette({ posts = [], projects = [] }: CommandPaletteProp
           <CommandItem
             onSelect={() =>
               runCommand(() =>
-                window.open(socials.find(s => s.name === "x.com")?.href, "_blank"),
+                window.open(
+                  socials.find((s) => s.name === "x.com")?.href,
+                  "_blank",
+                ),
               )
             }
           >
@@ -166,7 +173,10 @@ export function CommandPalette({ posts = [], projects = [] }: CommandPaletteProp
           <CommandItem
             onSelect={() =>
               runCommand(() =>
-                window.open(socials.find(s => s.name === "linkedin")?.href, "_blank"),
+                window.open(
+                  socials.find((s) => s.name === "linkedin")?.href,
+                  "_blank",
+                ),
               )
             }
           >
@@ -175,7 +185,9 @@ export function CommandPalette({ posts = [], projects = [] }: CommandPaletteProp
           </CommandItem>
           <CommandItem
             onSelect={() =>
-              runCommand(() => window.open("mailto:hello@rachitt.dev", "_blank"))
+              runCommand(() =>
+                window.open("mailto:hello@rachitt.dev", "_blank"),
+              )
             }
           >
             <Mail className="text-white/70 group-data-[selected=true]:text-black" />

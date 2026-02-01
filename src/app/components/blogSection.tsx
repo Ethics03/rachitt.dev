@@ -9,7 +9,9 @@ const posts = getPostMetaData()
 export default function BlogSection() {
   return (
     <div className="mb-12">
-      <h2 className="font-bold mb-6 text-3xl"><span className="text-accent">&gt;</span> blog</h2>
+      <h2 className="font-bold mb-6 text-3xl">
+        <span className="text-accent">&gt;</span> blog
+      </h2>
       <div className="space-y-6 mb-4">
         {posts.map((post) => (
           <Link key={post.slug} href={`/blog/${post.slug}`}>

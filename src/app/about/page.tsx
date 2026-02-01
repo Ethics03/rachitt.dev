@@ -10,8 +10,7 @@ export default function About() {
           <p>
             I'm Rachit Srivastava. I like to make backend systems and love
             low-level programming. I also enjoy using Linux, currently I'm using
-            Arch Linux as my main operating system.
-            currently:
+            Arch Linux as my main operating system. currently:
           </p>
 
           <p>

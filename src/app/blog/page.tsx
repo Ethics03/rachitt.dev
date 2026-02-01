@@ -19,10 +19,16 @@ export default function BlogPage() {
               className="block group hover:text-accent transition-colors"
             >
               <div className="flex items-baseline justify-between gap-4 mb-1">
-                <h2 className="text-lg font-semibold group-hover:text-accent transition-colors">{post.title}</h2>
-                <p className="text-sm text-gray-400 flex-shrink-0">{post.date}</p>
+                <h2 className="text-lg font-semibold group-hover:text-accent transition-colors">
+                  {post.title}
+                </h2>
+                <p className="text-sm text-gray-400 flex-shrink-0">
+                  {post.date}
+                </p>
               </div>
-              {post.excerpt && <p className="text-sm text-gray-400">{post.excerpt}</p>}
+              {post.excerpt && (
+                <p className="text-sm text-gray-400">{post.excerpt}</p>
+              )}
             </Link>
           ))}
         </div>
