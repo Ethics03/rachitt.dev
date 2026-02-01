@@ -2,7 +2,7 @@ export default function About() {
   return (
     <div className="flex items-center pt-10">
       <div className="flex flex-col gap-6 w-full">
-        <h1 className="text-3xl font-bold">
+        <h1 className="text-5xl md:text-4xl font-bold mb-6">
           <span className="text-accent">&gt;</span> about me
         </h1>
 
@@ -37,7 +37,6 @@ export default function About() {
             Working on side projects for learning each day and building
             something useful for people.
           </p>
-
         </div>
 
         <div className="mt-8 flex gap-4">
