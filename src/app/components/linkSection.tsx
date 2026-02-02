@@ -16,7 +16,8 @@ export default function LinkSection() {
       </div>
 
       <div>
-        <h2 className="font-bold mb-2 text-2xl">$ socials</h2>
+        <h2 className="font-bold mb-2 text-2xl">
+          <span className="text-accent">&gt;</span> socials</h2>
         <div className="border-t border-white/10 pt-4">
           <div className="flex gap-6 text-sm text-white/50">
             {socials.map((social) => (

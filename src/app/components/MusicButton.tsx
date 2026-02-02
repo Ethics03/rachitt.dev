@@ -29,13 +29,13 @@ export default function MusicButton() {
       onClick={togglePlay}
       whileHover={{ scale: 1.1 }}
       whileTap={{ scale: 0.95 }}
-      className="relative w-8 h-8 border border-white/20 hover:border-white/40 flex items-center justify-center transition-colors group"
+      className="relative w-8 h-8 border border-white/20 hover:border-white/40 flex items-center justify-center transition-colors group rounded-sm"
     >
       {/* Ripple effect when playing */}
       {playing && (
         <>
           <motion.div
-            className="absolute inset-0 border-2 border-white/20"
+            className="absolute inset-0 border-2 border-white/20 rounded-sm"
             animate={{
               scale: [1, 1.5, 1.5],
               opacity: [0.5, 0, 0],
@@ -47,7 +47,7 @@ export default function MusicButton() {
             }}
           />
           <motion.div
-            className="absolute inset-0 border-2 border-white/20"
+            className="absolute inset-0 border-2 border-white/20 rounded-sm"
             animate={{
               scale: [1, 1.5, 1.5],
               opacity: [0.5, 0, 0],

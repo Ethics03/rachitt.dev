@@ -16,7 +16,7 @@ export default function Projects() {
             <a
               key={project.id}
               href={project.link}
-              className="p-5 border border-white/30 hover:border-accent transition-colors duration-300 group relative"
+              className="p-5 border border-white/30 hover:border-accent transition-colors duration-300 group relative rounded-md"
             >
               <div className="flex items-start justify-between mb-3">
                 <h2 className="text-3xl font-bold text-white group-hover:text-accent transition-colors duration-300">
@@ -34,7 +34,7 @@ export default function Projects() {
                 {project.tech.map((tech) => (
                   <span
                     key={tech}
-                    className="px-3 py-1 text-xs border border-white/20 text-white/70"
+                    className="px-3 py-1 text-xs border border-white/20 text-white/70 rounded-sm"
                   >
                     {tech}
                   </span>
