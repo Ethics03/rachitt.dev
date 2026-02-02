@@ -1,5 +1,4 @@
 "use client";
-import { motion } from "framer-motion";
 import Link from "next/link";
 import { ArrowRight } from "lucide-react";
 import { projects } from "../lib/projects";
@@ -26,14 +25,14 @@ export default function ProjectsSection() {
         ))}
       </div>
       <Link href="/projects">
-        <motion.div
-          whileHover={{ x: 4 }}
-          className="flex items-center gap-2 text-base text-accent hover:translate-x-1 transition-all cursor-pointer"
-        >
+        <div className="flex items-center gap-2 text-base text-accent hover:translate-x-1 transition-all cursor-pointer">
           view all projects
           <ArrowRight className="w-4 h-4" />
-        </motion.div>
+        </div>
       </Link>
     </div>
   );
 }
+
+
+
