@@ -1,7 +1,7 @@
 export const work = [
   {
     company: "fordsmen",
-    role: "backend engineer intern",
+    role: "backend engineer",
     href: "https://fordsmen.com",
     description:
       "built and deployed a production-grade backend with custom authentication, caching, business logic, automated testing, and a full AWS infrastructure (EC2, RDS, Nginx, PostgreSQL).",
