@@ -13,7 +13,7 @@ export const projects = [
     name: "dex",
     role: "creator",
     description:
-      "a visual workflow builder with drag-and-drop nodes, has gmail and gemini integration.",
+      "a visual agentic workflow builder with drag-and-drop nodes, has gmail and gemini integration.",
     href: "/projects#hush",
     tech: ["ExpressJS", "BullMQ", "Redis", "NextJS", "Shadcn", "Reactflow"],
     link: "https://github.com/Ethics03/dex-core",
