@@ -3,7 +3,7 @@ export const projects = [
     id: 1,
     name: "hush",
     role: "creator and maintainer",
-    description: "fast, lightweight and encrypted password manager CLI in Rust",
+    description: "fast, lightweight and encrypted secrets manager CLI in Rust",
     href: "/projects#hush",
     tech: ["Rust", "Argon2", "Clap", "ChaCha20poly1305"],
     link: "https://github.com/Ethics03/hush",
