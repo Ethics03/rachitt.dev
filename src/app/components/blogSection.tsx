@@ -4,7 +4,7 @@ import getPostMetaData from "./getPostMetadata";
 
 const posts = getPostMetaData()
   .sort((a, b) => new Date(b.date).getTime() - new Date(a.date).getTime())
-  .slice(0, 2);
+  .slice(0, 3);
 
 export default function BlogSection() {
   return (

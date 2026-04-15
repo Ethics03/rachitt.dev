@@ -9,9 +9,9 @@ export default function Home() {
     <div className="flex items-center pt-10">
       <div className="max-w-5xl">
         <HeroSection />
+        <BlogSection />
         <WorkSection />
         <ProjectsSection />
-        <BlogSection />
         <LinkSection />
       </div>
     </div>
