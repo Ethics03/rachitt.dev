@@ -1,5 +1,11 @@
 export const work = [
   {
+    company: "Crosmos Labs",
+    role: "Co-Founder",
+    href: "https://crosmos.dev",
+    description: "building the context infrastructure your agents and teams deserve"
+  },
+  {
     company: "fordsmen",
     role: "backend engineer",
     href: "https://fordsmen.com",
