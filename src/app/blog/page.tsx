@@ -1,5 +1,5 @@
-import getPostMetadata from "../components/getPostMetadata";
 import Link from "next/link";
+import getPostMetadata from "../components/getPostMetadata";
 
 export default function BlogPage() {
   const posts = getPostMetadata();
@@ -11,24 +11,21 @@ export default function BlogPage() {
           <span className="text-accent">&gt;</span> blogs
         </h1>
 
-        <div className="w-full flex flex-col gap-3">
+        <div className="w-full flex flex-col">
           {posts.map((post) => (
             <Link
               key={post.slug}
               href={`/blog/${post.slug}`}
-              className="block group hover:text-accent transition-colors"
+              className="block group py-4 border-b border-white/10 last:border-b-0 hover:text-accent transition-colors"
             >
-              <div className="flex items-baseline justify-between gap-4 mb-1">
-                <h2 className="text-xs md:text-lg font-semibold group-hover:text-accent transition-colors">
+              <div className="flex flex-col gap-1 sm:flex-row sm:items-baseline sm:justify-between sm:gap-4">
+                <p className="text-base md:text-lg leading-snug font-semibold group-hover:text-accent transition-colors">
                   {post.title}
-                </h2>
-                <p className="text-sm text-gray-400 flex-shrink-0">
+                </p>
+                <p className="text-sm leading-none text-gray-400 flex-shrink-0">
                   {post.date}
                 </p>
               </div>
-              {post.excerpt && (
-                <p className="text-sm text-gray-400">{post.excerpt}</p>
-              )}
             </Link>
           ))}
         </div>

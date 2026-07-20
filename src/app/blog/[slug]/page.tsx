@@ -1,16 +1,20 @@
-import fs from "fs";
-import path from "path";
-import { notFound } from "next/navigation";
-import { useMDXComponents } from "@/app/components/mdx-components";
+import fs from "node:fs";
+import path from "node:path";
 import matter from "gray-matter";
+import Image from "next/image";
+import { notFound } from "next/navigation";
 import { MDXRemote } from "next-mdx-remote/rsc";
 import BackToBlogs from "@/app/components/backtoBlogs";
+import { useMDXComponents } from "@/app/components/mdx-components";
 
 type PostFrontmatter = {
   title: string;
   slug: string;
   date: string;
   excerpt?: string;
+  thumbnail?: string;
+  imageWidth?: number;
+  imageHeight?: number;
 };
 
 type Post = {
@@ -59,6 +63,16 @@ export default async function BlogPostPage({
           <p className="text-base text-gray-400 mb-4">
             {post.frontmatter.date}
           </p>
+          {post.frontmatter.thumbnail && (
+            <Image
+              src={post.frontmatter.thumbnail}
+              alt={post.frontmatter.title}
+              width={post.frontmatter.imageWidth ?? 1200}
+              height={post.frontmatter.imageHeight ?? 630}
+              priority
+              className="mb-8 h-auto w-full rounded-lg"
+            />
+          )}
           <MDXRemote source={post.content} components={components} />
         </article>
       </div>

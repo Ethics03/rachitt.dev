@@ -1,5 +1,5 @@
-import Link from "next/link";
 import { ArrowRight } from "lucide-react";
+import Link from "next/link";
 import getPostMetaData from "./getPostMetadata";
 
 const posts = getPostMetaData()
@@ -12,24 +12,22 @@ export default function BlogSection() {
       <h2 className="font-bold mb-6 text-3xl">
         <span className="text-accent">&gt;</span> blog
       </h2>
-      <div className="space-y-6 mb-4">
+      <div className="mb-4 flex flex-col">
         {posts.map((post) => (
-          <Link key={post.slug} href={`/blog/${post.slug}`}>
-            <div className="group cursor-pointer">
-              <div className="flex items-baseline justify-between mb-2">
-                <h3 className="text-md font-semibold text-white/90 group-hover:text-accent transition-colors">
+          <Link
+            key={post.slug}
+            href={`/blog/${post.slug}`}
+            className="group block border-b border-white/10 py-4 last:border-b-0"
+          >
+            <div className="cursor-pointer">
+              <div className="flex flex-col gap-1 sm:flex-row sm:items-baseline sm:justify-between sm:gap-4">
+                <p className="text-base md:text-lg leading-snug font-semibold text-white/90 group-hover:text-accent transition-colors">
                   {post.title}
-                </h3>
-                <span className="text-sm text-white/50 ml-4 flex-shrink-0">
+                </p>
+                <span className="text-sm leading-none text-white/50 flex-shrink-0">
                   {formatDate(post.date)}
                 </span>
               </div>
-
-              {post.excerpt && (
-                <p className="text-base text-white/50 leading-relaxed">
-                  {post.excerpt}
-                </p>
-              )}
             </div>
           </Link>
         ))}
