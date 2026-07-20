@@ -1,6 +1,25 @@
 export const projects = [
   {
     id: 1,
+    name: "crosmos",
+    role: "co-founder · crosmos-labs",
+    description: "context infrastructure for teams and agents",
+    href: "/projects#crosmos",
+    tech: ["Python", "TypeScript", "MCP", "Knowledge Graphs", "AI Memory"],
+    link: "https://crosmos.dev",
+  },
+  {
+    id: 2,
+    name: "ironic",
+    role: "co-founder · crosmos-labs",
+    description:
+      "open-source SDK and MCP server generation from your OpenAPI spec, fully compatible with stainless.yml",
+    href: "/projects#ironic",
+    tech: ["TypeScript", "OpenAPI", "MCP", "SDKs"],
+    link: "https://github.com/crosmos-labs/ironic",
+  },
+  {
+    id: 3,
     name: "hush",
     role: "creator and maintainer",
     description: "fast, lightweight and encrypted secrets manager CLI in Rust",
@@ -9,7 +28,7 @@ export const projects = [
     link: "https://github.com/Ethics03/hush",
   },
   {
-    id: 2,
+    id: 4,
     name: "dex",
     role: "creator",
     description:
@@ -20,7 +39,7 @@ export const projects = [
   },
 
   {
-    id: 3,
+    id: 5,
     name: "dots",
     role: "creator",
     description: "dotfile manager cli in go with git sync",
@@ -29,7 +48,7 @@ export const projects = [
     link: "https://github.com/Ethics03/dots",
   },
   {
-    id: 4,
+    id: 6,
     name: "uriel",
     role: "Creator",
     description: "api testing with ai security suggestions using Ollama3",
@@ -38,7 +57,7 @@ export const projects = [
     link: "https://github.com/Ethics03/uriel",
   },
   {
-    id: 5,
+    id: 7,
     name: "minpin",
     role: "Creator",
     description: "a url shortener in golang and postgresql",
