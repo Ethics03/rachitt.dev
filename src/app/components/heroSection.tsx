@@ -16,8 +16,9 @@ export default function HeroSection() {
       </div>
       <p className=" text-white/90 leading-relaxed mb-8">
         a developer who loves to build stuff and solve problems on the way. i
-        enjoy building scalable backend systems, implementing research papers, ai research and low-level programming.
-        when i'm not coding, i'm usually listening to music or shuffling cards.
+        enjoy building scalable backend systems, implementing research papers,
+        ai research and low-level programming. when i'm not coding, i'm usually
+        listening to music, playing chess or shuffling cards.
         <br />
         <b>
           <span className="text-accent">currently:</span> working around
