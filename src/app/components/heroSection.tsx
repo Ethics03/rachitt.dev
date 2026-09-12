@@ -15,14 +15,14 @@ export default function HeroSection() {
         </div>
       </div>
       <p className=" text-white/90 leading-relaxed mb-8">
-        a developer who loves to build stuff and solve problems on the way. i
-        enjoy building scalable backend systems, implementing research papers,
-        ai research and low-level programming. when i'm not coding, i'm usually
-        listening to music, playing chess or shuffling cards.
+        a developer who loves to build stuff and solve problems on the way. i enjoy building
+        scalable backend systems, implementing research papers, applied ai and low-level
+        programming. when i'm not coding, i'm usually listening to music, playing chess or shuffling
+        cards.
         <br />
         <b>
-          <span className="text-accent">currently:</span> working around
-          concurrency, system architecture and distributed systems mostly in
+          <span className="text-accent">currently:</span> working around concurrency, system
+          architecture and distributed systems mostly in
           <span className="text-accent"> go</span>
         </b>
       </p>
